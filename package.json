@@ -1,0 +1,33 @@
+{
+  "name": "ai-cli",
+  "version": "0.1.0",
+  "description": "aci - AI Context Initializer，一键初始化 AI 编码上下文与模式切换",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "aci": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "tsup src/index.ts --format esm --target node22 --watch",
+    "build": "tsup src/index.ts --format esm --target node22 --clean --sourcemap",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@clack/prompts": "^1.8.1",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "tsup": "^9.0.0",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  }
+}
